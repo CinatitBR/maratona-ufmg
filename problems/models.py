@@ -21,7 +21,7 @@ class Problem(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     completed = models.ManyToManyField('auth.User')
 
-class Resources(models.Model):
+class Resource(models.Model):
     resource_name = models.CharField(max_length=255)
     url = models.URLField(max_length=500)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
