@@ -9,7 +9,7 @@ class Competitor(models.Model):
 class Topic(models.Model):
     topic_name = models.CharField(max_length=255)
 
-class Problem(models.Mobel):
+class Problem(models.Model):
     class Difficulty(models.IntegerChoices):
         EASY = 1
         MEDIUM = 2
