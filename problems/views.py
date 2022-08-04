@@ -1,5 +1,5 @@
 from rest_framework import generics
-from rest_framework.response import Response
+from rest_framework.permissions import DjangoModelPermissions
 
 from problems.models import Problem, Topic
 from problems.serializers import ProblemSerializer, TopicSerializer
@@ -25,6 +25,13 @@ class ProblemList(generics.ListCreateAPIView):
 
         return super().get_queryset()
 
+class ProblemDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Retrieve, update or delete a problem.
+    """
+    queryset = Problem.objects.all()
+    serializer_class = ProblemSerializer
+    permission_classes = [DjangoModelPermissions]
 
 class TopicDetail(generics.RetrieveAPIView):
     """
