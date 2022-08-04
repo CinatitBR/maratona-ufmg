@@ -13,6 +13,7 @@ class ProblemList(generics.ListCreateAPIView):
     """
     queryset = Problem.objects.all()
     serializer_class = ProblemSerializer
+    permission_classes = [DjangoModelPermissions]
 
     def get_queryset(self):
         topic_id = self.request.GET.get('topic_id', None)
