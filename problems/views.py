@@ -1,4 +1,4 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from rest_framework.permissions import DjangoModelPermissions
 
 from problems.models import Problem, Topic
@@ -34,9 +34,10 @@ class ProblemDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProblemSerializer
     permission_classes = [DjangoModelPermissions]
 
-class TopicDetail(generics.RetrieveAPIView):
+class TopicViewSet(viewsets.ModelViewSet):
     """
-    Retrieve a topic.
+    Viewset for managing topics.
     """
     queryset = Topic.objects.all()
     serializer_class = TopicSerializer
+    permission_classes = [DjangoModelPermissions]
