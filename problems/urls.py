@@ -1,4 +1,4 @@
-from django.urls import path, include
+from django.urls import path
 from rest_framework.routers import SimpleRouter
 from knox import views as knox_views
 from problems import views
@@ -6,8 +6,9 @@ from problems import views
 
 router = SimpleRouter()
 
-# Register topics endpoints
+# Register Viewset endpoints
 router.register('topics', views.TopicViewSet, basename='topic')
+router.register('resources', views.ResourceViewSet, basename='resource')
 
 urlpatterns = [
     path('auth/login/', views.Login.as_view(), name='knox_login'),
