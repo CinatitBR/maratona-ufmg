@@ -9,7 +9,8 @@ router = SimpleRouter()
 router.register('topics', views.TopicViewSet, basename='topic')
 
 urlpatterns = [
-    path('auth/', include('knox.urls')),
+    # path('auth/', include('knox.urls')),
+    path('auth/login/', views.Login.as_view(), name='knox_login'),
 
     path('problems/', views.ProblemList.as_view(), name='problem-list'),
     path('problems/<int:pk>/', views.ProblemDetail.as_view(), name='problem-detail'),
