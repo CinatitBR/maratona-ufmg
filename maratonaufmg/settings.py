@@ -141,4 +141,5 @@ REST_FRAMEWORK = {
 # Rest Knox settings
 REST_KNOX = {
     'AUTH_HEADER_PREFIX': 'Bearer',
+    'USER_SERIALIZER': 'problems.serializers.UserSerializer',
 }
