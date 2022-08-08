@@ -1,10 +1,18 @@
 from rest_framework import generics, viewsets
 from rest_framework.permissions import DjangoModelPermissions
+from rest_framework.authentication import BasicAuthentication
+
+from knox.views import LoginView as KnoxLoginView
+from knox.auth import TokenAuthentication
 
 from problems.models import Problem, Topic
 from problems.serializers import ProblemSerializer, TopicSerializer
 
+
 # Create your views here.
+
+class Login(KnoxLoginView):
+    authentication_classes = [BasicAuthentication]
 
 class ProblemList(generics.ListCreateAPIView):
     """
@@ -40,4 +48,5 @@ class TopicViewSet(viewsets.ModelViewSet):
     """
     queryset = Topic.objects.all()
     serializer_class = TopicSerializer
+    authentication_classes = [TokenAuthentication]
     permission_classes = [DjangoModelPermissions]
