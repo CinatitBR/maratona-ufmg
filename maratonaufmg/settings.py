@@ -133,7 +133,12 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# Rest knox settings
+# Rest Framework settings
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': ['knox.auth.TokenAuthentication']
+}
+
+# Rest Knox settings
 REST_KNOX = {
     'AUTH_HEADER_PREFIX': 'Bearer',
 }
