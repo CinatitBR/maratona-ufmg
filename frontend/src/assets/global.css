@@ -1,0 +1,39 @@
+:root {
+  --bg-color: #14131E;
+  --bg-color-2: #232231;
+  --light-grey: #D3DCE6;
+  --white: #fff;
+  --yellow: #F1E57B;
+  --dark-blue: #25265E;
+  --blue-sky: #99BCFF;
+  --black: #000;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #D3DCE6;
+  font-size: 16px;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+
+html {
+  background-color: var(--bg-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
