@@ -15,7 +15,7 @@ const LoginPage = () => {
     <FormAuth 
       buttonText="Sign in"
       switchLink={
-        <Link href="#">Don't have an account?</Link>
+        <Link href="/signup">Don't have an account?</Link>
       }
     >
       <Field 

@@ -1,3 +1,5 @@
+import { Link as RouterLink } from 'react-router-dom'
+
 import styles from './index.module.css'
 
 interface Props {
@@ -6,9 +8,9 @@ interface Props {
 }
 
 const Link = ({ children, href }: Props) => {
-  return <a className={styles.Link} href={href}>
+  return <RouterLink className={styles.Link} to={href}>
     {children}
-  </a>
+  </RouterLink>
 }
 
 export default Link

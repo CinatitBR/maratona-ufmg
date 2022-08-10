@@ -13,7 +13,7 @@ const SignupPage = () => {
     
     <FormAuth 
       buttonText="Sign up"
-      switchLink={<Link href="#">Already have an account?</Link>}
+      switchLink={<Link href="/login">Already have an account?</Link>}
     >
       <Field 
         type="text" 
