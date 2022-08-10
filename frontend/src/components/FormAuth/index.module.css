@@ -1,0 +1,40 @@
+.wrapper {
+  width: 100%;
+  max-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.wrapper form {  
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form Heading */
+.heading {
+  text-align: center;
+  position: relative;
+}
+
+.heading::before, .heading::after {
+  content: "";
+  width: 46%;
+  height: 2px;
+  background-color: var(--bg-color-2);
+  border-radius: 5px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.heading::after {
+  right: 0;
+}
+
+.heading::before {
+  left: 0;
+}
