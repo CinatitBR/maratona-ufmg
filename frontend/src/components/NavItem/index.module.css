@@ -1,0 +1,30 @@
+.navItem {
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: background-color 300ms;
+  
+  position: relative;
+}
+
+.navItem:hover {
+  background-color: var(--light-red);
+}
+
+/* Active link */
+.active {
+  color: var(--red-1);
+}
+
+.active::before {
+  content: "";
+
+  width: 4px;
+  height: 100%;
+
+  background: var(--red-1);
+  border-radius: 0 10px 10px 0;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}

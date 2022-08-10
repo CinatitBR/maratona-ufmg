@@ -7,6 +7,9 @@
   --dark-blue: #25265E;
   --blue-sky: #99BCFF;
   --black: #000;
+  --stroke-color: #343344;
+  --red-1: rgb(255, 182, 182);
+  --light-red: rgba(255, 182, 182, 0.2);
 }
 
 * {
