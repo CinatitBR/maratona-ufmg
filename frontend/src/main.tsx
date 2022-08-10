@@ -4,7 +4,9 @@ import App from './App'
 
 import './assets/global.css'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+
+root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
