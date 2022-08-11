@@ -1,0 +1,19 @@
+.navBox {
+  background-color: var(--bg-color-2);
+  border-radius: 5px;
+  border: solid 1px var(--stroke-color);
+  padding-bottom: 5px;
+}
+
+.navBox h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+
+  padding: 10px 20px;
+}
+
+.navBox nav {
+  display: flex;
+  flex-direction: column;
+}
