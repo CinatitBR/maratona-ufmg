@@ -1,21 +1,31 @@
-.navItem {
+/* ExternalLink */
+.externalLink {
+  padding: 4px 20px;
+}
+
+.externalLink:hover {
+  text-decoration: underline;
+}
+
+/* Internal Lik */
+.internalLink {
   padding: 8px 20px;
   font-weight: 500;
+
   transition: background-color 300ms;
-  
   position: relative;
 }
 
-.navItem:hover {
+.internalLink:hover {
   background-color: var(--light-red);
 }
 
 /* Active link */
-.active {
+.internalLink.active {
   color: var(--red-1);
 }
 
-.active::before {
+.internalLink.active::before {
   content: "";
 
   width: 4px;
