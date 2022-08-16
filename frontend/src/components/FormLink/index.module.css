@@ -1,10 +1,10 @@
-.Link {
+.formLink {
   color: var(--blue-sky);
   position: relative;
   font-size: 14px;
 }
 
-.Link::after {
+.formLink::after {
   content: "";
   background-color: var(--blue-sky);
   position: absolute;

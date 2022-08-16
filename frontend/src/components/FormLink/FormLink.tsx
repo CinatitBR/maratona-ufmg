@@ -7,10 +7,10 @@ interface Props {
   href: string
 }
 
-const Link = ({ children, href }: Props) => {
-  return <RouterLink className={styles.Link} to={href}>
+const FormLink = ({ children, href }: Props) => {
+  return <RouterLink className={styles.formLink} to ={href}>
     {children}
   </RouterLink>
 }
 
-export default Link
+export default FormLink

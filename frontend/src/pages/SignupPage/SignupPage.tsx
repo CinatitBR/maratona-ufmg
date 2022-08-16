@@ -3,7 +3,7 @@ import LogoHeaderBox from '../../components/LogoHeaderBox/LogoHeaderBox'
 import ExternalButtonList from '../../components/ExternalButtonList/ExternalButtonList'
 import FormAuth from '../../components/FormAuth/FormAuth'
 import Field from '../../components/Field/Field'
-import Link from '../../components/Link/Link'
+import FormLink from '../../components/FormLink/FormLink'
 
 const SignupPage = () => {
   return <AuthPageWrapper>
@@ -13,7 +13,7 @@ const SignupPage = () => {
     
     <FormAuth 
       buttonText="Sign up"
-      switchLink={<Link href="/login">Already have an account?</Link>}
+      switchLink={<FormLink href="/login">Already have an account?</FormLink>}
     >
       <Field 
         type="text" 

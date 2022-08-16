@@ -1,6 +1,5 @@
 import FieldList from '../FieldList/FieldList'
 import Button from '../Button/Button'
-import Link from '../Link/Link'
 
 import styles from './index.module.css'
 
