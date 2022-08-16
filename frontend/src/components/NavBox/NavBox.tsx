@@ -3,16 +3,22 @@ import styles from './index.module.css'
 
 interface Props {
   title: string,
+
   linkList: {
     id: number,
     title: string,
     to: string
-  }[]
+  }[],
+
+  maxWidth: number,
 }
 
-const NavBox = ({ title, linkList }: Props) => {
+const NavBox = ({ title, linkList, maxWidth }: Props) => {
   
-  return <div className={styles.navBox}>
+  return <div 
+    className={styles.navBox} 
+    style={{maxWidth}}
+  >
 
     <h3>{title}</h3>
 
