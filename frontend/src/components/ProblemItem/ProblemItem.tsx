@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import styles from './index.module.css'
 
 interface Problem {
@@ -12,15 +13,28 @@ interface Props {
 }
 
 const ProblemItem = ({ problem }: Props) => {
+  const [checked, setChecked] = useState(false)
+
+  const handleChange = () => {
+    setChecked(state => !state)
+  }
+
+  useEffect(() => {
+    setChecked(problem.is_completed)
+  }, [])
+
   return <div className={styles.wrapper}>
     <input 
       type="checkbox" 
       className={styles.checkbox} 
-      checked={problem.is_completed}
+      checked={checked}
+      onChange={handleChange}
     />
     
     <h4>
-      <a href={problem.url} target="_blank">{problem.problem_name}</a>
+      <a href={problem.url} target="_blank">
+        {problem.problem_name}
+      </a>
     </h4>
   </div>
 }
