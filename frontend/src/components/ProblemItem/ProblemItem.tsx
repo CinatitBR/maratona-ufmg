@@ -15,7 +15,7 @@ const ProblemItem = ({ problem_name, url, is_completed }: Problem) => {
     />
     
     <h4>
-      <a href={url}>{problem_name}</a>
+      <a href={url} target="_blank">{problem_name}</a>
     </h4>
   </div>
 }
