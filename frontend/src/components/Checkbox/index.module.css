@@ -1,0 +1,52 @@
+.wrapper {
+  user-select: none;
+  cursor: pointer;
+
+  position: relative;
+}
+
+/* Hide browser's default checkbox. The click still works. */
+.wrapper input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  position: absolute;
+}
+
+/* Create custom checkbox */
+.checkmark {
+  width: 20px;
+  height: 20px;
+  border: solid 2px var(--stroke-color);
+  transition: border-color 300ms;
+
+  position: relative;
+}
+
+/* Create checkmark indicator */
+.checkmark:after {
+  content: "";
+  width: 8px;
+  height: 5px;
+  
+  border: solid var(--red-1);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  
+  position: absolute;
+  top: 20%;
+  left: 20%;
+
+  opacity: 0;
+}
+
+/* When checkbox is checked */
+.wrapper input:checked ~ .checkmark {
+  border-color: var(--red-1);
+}
+
+/* Show checkmark indicator */
+.wrapper input:checked ~ .checkmark:after {
+  opacity: 1;
+}

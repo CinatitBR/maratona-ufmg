@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import Checkbox from '../Checkbox/Checkbox'
+
 import styles from './index.module.css'
 
 interface Problem {
@@ -24,12 +26,7 @@ const ProblemItem = ({ problem }: Props) => {
   }, [])
 
   return <div className={styles.wrapper}>
-    <input 
-      type="checkbox" 
-      className={styles.checkbox} 
-      checked={checked}
-      onChange={handleChange}
-    />
+    <Checkbox checked={checked} onChange={handleChange} />
     
     <h4>
       <a href={problem.url} target="_blank">
