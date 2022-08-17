@@ -1,21 +1,26 @@
 import styles from './index.module.css'
 
 interface Problem {
+  id: number,
   problem_name: string,
   url: string,
   is_completed: boolean
 }
 
-const ProblemItem = ({ problem_name, url, is_completed }: Problem) => {
+interface Props {
+  problem: Problem
+}
+
+const ProblemItem = ({ problem }: Props) => {
   return <div className={styles.wrapper}>
     <input 
       type="checkbox" 
       className={styles.checkbox} 
-      checked={is_completed}
+      checked={problem.is_completed}
     />
     
     <h4>
-      <a href={url} target="_blank">{problem_name}</a>
+      <a href={problem.url} target="_blank">{problem.problem_name}</a>
     </h4>
   </div>
 }

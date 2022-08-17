@@ -12,9 +12,8 @@ const ProblemList = ({ problems }: Props) => {
 
     {problems.map(problem => (
       <ProblemItem 
-      problem_name={problem.problem_name}
-      url={problem.url}
-      is_completed={problem.is_completed}
+        key={problem.id}
+        problem={problem}
       />
     ))}
 
