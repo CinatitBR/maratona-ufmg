@@ -1,0 +1,10 @@
+.wrapper {
+  width: 400px;
+  background-color: var(--bg-color-2);
+  border-radius: 5px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
