@@ -1,0 +1,48 @@
+/* Rank Item */
+.rankItem {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.rankItem h3 {
+  color: var(--white);
+  font-size: 14px;
+}
+
+.rankItem .left {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rankItem .count {
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Divider */
+.divider {
+  padding-bottom: 10px;
+  border-bottom: solid 1px var(--light-yellow);
+}
+
+/* Progress Bar */
+.progressBar {
+  width: 100%;
+  height: 5px;
+  border-radius: 15px;
+  background-color: var(--black-1);
+}
+
+.progressBar .progress {
+  height: 100%;
+  width: 30%;
+  background-color: var(--yellow);
+  border-radius: 15px;
+}
