@@ -1,16 +1,24 @@
 :root {
   --bg-color: #14131E;
   --bg-color-2: #232231;
+
   --light-grey: #D3DCE6;
   --white: #fff;
-  --yellow: #F1E57B;
-  --green: #C1FFBF;
+
   --dark-blue: #25265E;
   --blue-sky: #99BCFF;
+
   --black: #000;
-  --stroke-color: #343344;
+  --black-1: #464646;
+
   --red-1: rgb(255, 182, 182);
   --light-red: rgba(255, 182, 182, 0.2);
+
+  --stroke-color: #343344;
+  --green: #C1FFBF;
+
+  --yellow: rgb(241, 229, 123);
+  --light-yellow: rgb(241, 229, 123, 0.15);
 }
 
 * {
